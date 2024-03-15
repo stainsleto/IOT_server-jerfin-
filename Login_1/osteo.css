@@ -9,6 +9,7 @@ body {
   }
   .logo{
         display: block;
+        margin-top: 30px;
         margin-left: auto;
         margin-right: auto;
         
@@ -18,19 +19,10 @@ body {
   h3 {
     text-align: center;
     font-size: 24px;
-  }
-  .rijo
-  {
-    display: flex;
-    justify-content:flex-start;
-padding: auto;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 50px;
-    
-    
+    margin-top: 40px;
   }
   
+
   .login-container {
     width: 536px;
     height: 661px;
@@ -52,6 +44,8 @@ padding: auto;
   
   .form-group label {
     display: block;
+    font-size: 18px;
+    
     
     
   }
@@ -64,21 +58,42 @@ padding: auto;
     border-radius: 10px;
     
   }
+  .Username1{
+    
+    margin-top: 50px;
+  }
+  .Password{
+    
+    margin-top: 40px;
+  }
   
   
   button {
     width: 195px;
     height: 52px;
     padding: 10px;
+    
     display: block;
+    font-size: 18px;
+display: block;
 
-    margin-left: 80px;
+margin: auto;    
   
   background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 10px;
     cursor: pointer;
+  }
+  .login{
+    padding: 32px;
+  }
+  .Signup{
+    display: block;
+    
+    
+    
+    
   }
   
   button:hover {
