@@ -1,164 +1,89 @@
-.macbook-pro-16-2-child {
-  position: absolute;
-  top: 183px;
-  left: 568px;
-  border-radius: 32px;
-  background-color: var(--color-white);
-  width: 591px;
-  height: 771px;
+*{
+  font-family: 'Montserrat', sans-serif;
 }
-.logo-shapes-44 {
-  height: 100%;
-  width: 24.39%;
-  top: 0;
-  right: 75.61%;
-  bottom: 0;
-  left: 0;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-  object-fit: cover;
-  mix-blend-mode: normal;
+body {
+  margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
-.logo,
-.logo-shapes-44,
-.serv {
-  position: absolute;
+.container{
+  width: 536px;
+    height: 761px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
 }
-.serv {
-  top: 24px;
-  left: 43px;
-  font-weight: 600;
-  display: inline-block;
-  width: 112px;
-  height: 32px;
+.logo{
+  display: block;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 155.8px;
+  height: 60.6px;
 }
-.logo {
-  height: 5.34%;
-  width: 8.97%;
-  top: 19.52%;
-  right: 45.54%;
-  bottom: 75.15%;
-  left: 45.49%;
-  text-align: left;
-  font-size: 38px;
-  color: var(--color-royalblue);
-  font-family: var(--font-league-spartan);
-}
-.sign-up-to {
-  font-weight: 600;
-}
-.sign-up-to-container {
-  position: absolute;
-  top: 303px;
-  left: 650px;
-  font-size: 24px;
-  display: inline-block;
-  width: 428px;
-  height: 25px;
-}
-.macbook-pro-16-2-inner,
-.macbook-pro-16-2-item,
-.rectangle-div {
-  position: absolute;
-  top: 425px;
-  left: 650px;
-  border-radius: var(--br-4xs);
-  background-color: var(--color-white);
-  border: 1px solid var(--color-darkgray);
-  box-sizing: border-box;
-  width: 411px;
-  height: 59px;
-}
-.macbook-pro-16-2-inner,
-.rectangle-div {
-  top: 552px;
-}
-.rectangle-div {
-  top: 679px;
-}
-.email,
-.password,
-.user-name {
-  position: absolute;
-  top: 394px;
-  left: 647px;
-  display: inline-block;
-  width: 111px;
-  height: 20px;
-}
-.email,
-.password {
-  top: 521px;
-  left: 650px;
-  text-align: left;
-}
-.password {
-  top: 646px;
-}
-.get-started-child {
-  position: absolute;
-  top: calc(50% - 26px);
-  left: calc(50% - 97.55px);
-  border-radius: var(--br-base);
-  background-color: var(--color-royalblue);
-  width: 195.1px;
-  height: 52px;
-}
-.sign-up {
-  position: absolute;
-  top: 14.3px;
-  left: 46.1px;
-  font-weight: 600;
-  display: inline-block;
-  width: 102.6px;
-  height: 16.9px;
-}
-.get-started,
-.get-started-item {
-  position: absolute;
-  width: 195.1px;
-  height: 52px;
-}
-.get-started {
-  top: calc(50% + 222.5px);
-  left: calc(50% - 98px);
-  cursor: pointer;
-  color: #f8fafc;
-}
-.get-started-item {
-  top: calc(50% - 26px);
-  left: calc(50% - 97.55px);
-  border-radius: var(--br-base);
-  background-color: var(--color-white);
-  border: 2px solid var(--color-royalblue);
-  box-sizing: border-box;
-}
-.back-to-login {
-  position: absolute;
-  top: 15px;
-  left: 34px;
-  font-weight: 600;
-  display: inline-block;
-  width: 130px;
-  height: 17px;
-}
-.get-started1 {
-  position: absolute;
-  top: calc(50% + 299.5px);
-  left: calc(50% - 99px);
-  width: 195.1px;
-  height: 52px;
-  color: var(--color-royalblue);
-}
-.macbook-pro-16-2 {
-  width: 100%;
-  position: relative;
-  background-color: #f0f3f4;
-  height: 1117px;
-  overflow: hidden;
+h3{
+  
   text-align: center;
-  font-size: var(--font-size-lg);
-  color: var(--color-black);
-  font-family: var(--font-inter);
+  font-size: 24px;
+  margin-top: 40px;
 }
+.form_group{
+
+   padding: 10px;
+
+}
+.form_group label {
+
+  font-size: 18px;
+}
+.form_group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 24px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.username{
+  padding: 20px;
+}
+.email{
+  padding: 20px;
+}
+.password{
+  padding: 20px;
+}
+.button1{
+  padding: 20px;
+}
+
+
+.login { 
+  width: 195px;
+  height: 52px;
+  padding: 10px;
+  font-size: 18px;
+  display: block;
+  margin: auto;
+  color: #007bff;
+  background-color: #fff;
+  border-color: #007bff;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.SignUp{
+  width: 195px;
+  height: 52px;
+  padding: 10px;
+  font-size: 18px;
+  display: block;
+  margin: auto;
+ background-color: #007bff;
+  color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    
+}
+
