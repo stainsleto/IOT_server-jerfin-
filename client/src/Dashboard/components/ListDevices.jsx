@@ -7,7 +7,7 @@ function ListDevices() {
     const token = localStorage.getItem('token');
 
     useEffect(() => {
-        axios.post('http://94.237.79.8/api/wg/get_peers',{},{
+        axios.post('https://ampx.site/api/wg/get_peers',{},{
             headers:{
                 'Authorization':token
             } 

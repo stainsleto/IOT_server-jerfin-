@@ -17,7 +17,7 @@ function AddDevices() {
     const handleOnSubmit = (e) => {
         e.preventDefault();
         console.log(form);
-        axios.post('http://94.237.79.8/api/wg/add_peer',form,{
+        axios.post('https://ampx.site/api/wg/add_peer',form,{
             headers:{
                 'Authorization':token,
             }

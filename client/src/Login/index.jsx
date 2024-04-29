@@ -1,9 +1,10 @@
 import React, {useState} from "react";
 import axios from 'axios';
+import {useNavigate} from 'react-router-dom'
 import Logo from '../assets/Logo.png'
 
 const Login = () => {
-
+    const navigate = useNavigate();
     const [form, setForm] = useState({
         username :"",
         password:""
@@ -19,15 +20,11 @@ const Login = () => {
     const handleOnSubmit = (e) => {
         e.preventDefault();
         console.log(form);
-        axios.post('http://94.237.79.8/api/auth/login',form,{
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-            }
-        
-        })
+        axios.post('https://ampx.site/api/auth/login',form)
         .then( (response) => {
             console.log(response.data)
             localStorage.setItem('token',response.data.tokens.access_token);
+            response.data.tokens.access_token ? navigate('/dashboard') : alert('Invalid Credentials')
         })
     };
 
