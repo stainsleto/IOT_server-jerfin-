@@ -7,14 +7,26 @@ function ListDevices() {
     const token = localStorage.getItem('token');
 
     useEffect(() => {
-        axios.post('https://ampx.site/api/wg/get_peers',{},{
-            headers:{
-                'Authorization':token
-            } 
-        })
-        .then( res => setDevices(res.data.peers))
+        
+        let config = {
+            method: 'post',
+            maxBodyLength: Infinity,
+            url: 'https://ampx.site/api/wg/get_peers',
+            headers: { 
+              'Authorization': `Bearer ${token}`, 
+            },
+          };
+          
+          axios.request(config)
+          .then((response) => {
+            console.log((response.data));
+            setDevices(response.data.peers)
+          })
+          .catch((error) => {
+            console.log(error);
+          })
     
-    },[]
+    },[token]
     )
 
   return (

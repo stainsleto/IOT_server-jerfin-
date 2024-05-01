@@ -16,17 +16,41 @@ function AddDevices() {
 
     const handleOnSubmit = (e) => {
         e.preventDefault();
-        console.log(form);
-        axios.post('https://ampx.site/api/wg/add_peer',form,{
-            headers:{
-                'Authorization':token,
-            }
-        })
-        .then( (response) => {
+        let formData = new FormData();
+        // console.log(form);
+        // axios.post('https://ampx.site/api/wg/add_peer',form,{
+        //     headers:{
+        //         'Authorization':token,
+        //     }
+        // })
+        // .then( (response) => {
+        //     console.log(response.data)
+        // })
+
+        formData.append('public_key', form.publicKey);
+        formData.append('email', form.email);
+
+        let config = {
+        method: 'post',
+        maxBodyLength: Infinity,
+        url: 'https://ampx.site/api/wg/add_peer',
+        headers: { 
+            'Authorization': `Bearer ${token}`, 
+        },
+        data : formData
+        };
+
+        axios.request(config)
+        .then((response) => {
+            setForm({ email : "", publicKey : "" });
             console.log(response.data)
+            alert('Device Added')
+        })
+        .catch((error) => {
+            alert('Failed to add device')
+            console.log(error);
         })
         
-        setForm({ email : "", publicKey : "" });
 
     }
 

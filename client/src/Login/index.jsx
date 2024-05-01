@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom'
 import Logo from '../assets/Logo.png'
+import { Link } from "react-router-dom";
 
 const Login = () => {
     const navigate = useNavigate();
@@ -19,13 +20,27 @@ const Login = () => {
 
     const handleOnSubmit = (e) => {
         e.preventDefault();
-        console.log(form);
-        axios.post('https://ampx.site/api/auth/login',form)
-        .then( (response) => {
-            console.log(response.data)
-            localStorage.setItem('token',response.data.tokens.access_token);
-            response.data.tokens.access_token ? navigate('/dashboard') : alert('Invalid Credentials')
-        })
+        const formData = new FormData();
+        formData.append('username', form.username);
+        formData.append('password', form.password);
+
+        const config = {
+            method: 'post',
+            maxBodyLength: Infinity,
+            url: 'https://ampx.site/api/auth/login',
+            data: formData
+        };
+
+        axios.request(config)
+            .then((response) => {
+                alert('Login Successful')
+                localStorage.setItem('token',response.data.tokens.access_token);
+                response.data.tokens.access_token ? navigate('/dashboard') : alert('Invalid Credentials')
+            })
+            .catch((error) => {
+                alert('Login Failed')
+                console.log(error);
+            });
     };
 
     
@@ -53,7 +68,7 @@ const Login = () => {
                     
                 </form>
 
-                <p>Don't have an account ? Signup</p>
+                <p>Don't have an account ? <Link to="/signup"> Signup </Link></p>
         
             </section>
 
